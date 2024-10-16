@@ -9,4 +9,17 @@ import { Component } from '@angular/core';
 })
 export class CursosComponent {
 
+  /*
+  //SECCION 1 CURSOS DISPONIBLES
+// Función para mostrar u ocultar los detalles de cada curso
+function toggleDetails(courseId) {
+  var details = document.getElementById(courseId);
+  if (details.style.display === "none") {
+      details.style.display = "block";
+  } else {
+      details.style.display = "none";
+  }
+}
+
+*/
 }

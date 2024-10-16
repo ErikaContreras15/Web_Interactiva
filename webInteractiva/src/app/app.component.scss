@@ -1,0 +1,191 @@
+/* ----------------------- General ----------------------- */
+body, html {
+    margin: 0;
+    padding: 0;
+    font-family: 'Arial', sans-serif;
+    background-color: #f4f4f4;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* ----------------------- HEADER----------------------- */
+.header {
+    background-color: #42bcc0;
+    color: #fff;
+    padding: 15px 0;
+}
+
+.header-content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+/* ----------- Navigation Menu ---------------- */
+.nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    align-items: center;
+}
+
+.nav ul li {
+    margin-left: 0px;
+}
+
+.nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 16px;
+    padding: 8px 15px;
+    border-radius: 5px;
+}
+
+.nav ul li a:hover {
+    background-color: #6f7cf0;
+}
+
+/* ------------ User Actions ------------------- */
+.user-actions {
+    display: flex;
+    align-items: center;
+}
+
+.search-bar {
+    padding: 8px;
+    border: none;
+    border-radius: 5px;
+    margin-right: 15px;
+}
+
+.login-btn, .register-btn {
+    background-color: #16657b;
+    color: #fff;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-left: 10px;
+    transition: background-color 0.3s ease;
+}
+
+.login-btn:hover, .register-btn:hover {
+    background-color: #5487d2;
+}
+
+/* ------Responsive Design ------------------- */
+@media (max-width: 768px) {
+    .header-content {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .nav ul {
+        flex-direction: column;
+        text-align: left;
+        width: 100%;
+    }
+
+    .user-actions {
+        margin-top: 10px;
+    }
+}
+
+/* ----------------------- Main Section ----------------------- */
+.main {
+    background-color: #eaeff2;
+    padding: 0.2px 0;
+}
+
+.main .container {
+    display: flex;
+    justify-content: center; 
+    align-items: center; 
+}
+
+.main-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%; 
+    max-width: 1200px; 
+    padding: 20px;
+}
+
+.text-content {
+    flex: 1; 
+}
+
+.text-content h1 {
+    font-family: 'Playfair Display', serif; /* Cambia la fuente */
+   /*font-family: 'Lora', serif;  Cambia la fuente */
+    font-size: 2rem;
+    color: #1e0883;
+    margin-bottom: 20px;
+    line-height: 1.5;
+}
+
+.find-courses-btn {
+    padding: 10px 50px;
+    background-color: #0072ce;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.find-courses-btn:hover {
+    background-color: #ab50e4;
+}
+
+.image-content {
+    flex: 1; 
+    display: flex;
+    justify-content: flex-end; 
+}
+
+.image-content img {
+    width: 100%; 
+    height: auto;
+    max-width: 500px; 
+    border-radius: 10px; 
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2); /* Sombra */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Transición suave */
+}
+/*efecto al pasar el mouse*/
+.image-content img:hover {
+    transform: scale(1.05); /* Aumentar tamaño */
+    box-shadow: 0 8px 40px rgba(0, 0, 0, 0.8); /* Sombra más pronunciada */
+
+}
+
+
+/* ----------------------- Search Section ----------------------- */
+.search-container {
+    position: relative;
+    display: inline-block;
+}
+
+.search-input {
+    width: 100%;
+    max-width: 700px;
+    padding: 10px 40px; /* Ajusta el padding a la izquierda para dar espacio a la lupa */
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.search-icon {
+    position: absolute;
+    left: 10px; /* Ajusta la posición horizontal */
+    top: 60%;
+    transform: translateY(-50%); /* Centra verticalmente el icono */
+    width: 20px; /* Ajusta el tamaño de la lupa */
+    height: auto; /* Mantiene la proporción */
+    pointer-events: none; /* Evita que el icono interfiera con el clic en el campo de búsqueda */
+}

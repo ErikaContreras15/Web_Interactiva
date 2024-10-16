@@ -1,1 +1,98 @@
-<p>agregar-cursos works!</p>
+
+      <!--------------------------------Encabezado----------------------------->
+      <header class="header">
+        <div class="container">   
+            <div class ="header-content">
+    
+               <nav class="nav">
+                 <ul>
+                 <li><a href="Inicio">Inicio</a></li>
+                 <li><a href="Cursos">Cursos</a></li>
+                 <li><a href="AgregarCurso">Agregar Curso</a></li>
+                 <li><a href="Contacto">Contacto</a></li> 
+                  </ul>
+                </nav>
+    
+               <div class="user-actions">
+                 <input type="text" class="search-bar" placeholder="Buscar...">
+                 <button class="login-btn">Inicia sesión</button>
+                 <button class="register-btn">Regístrate</button>
+                </div>
+            </div>
+        </div>
+      </header>
+ 
+ 
+ <!-- Formulario de Registro de Cursos -->
+   <section id="AgregarCurso">
+    <h2>Registrar Cursos</h2>
+    <form id="formCurso">
+       <label for="nombre">Nombre del curso:</label>
+       <input type="text" id="nombre" required><br><br>
+
+       <label for="docente">Docente:</label>
+       <input type="text" id="docente" required><br><br>
+
+       <label for="fechaInicio">Fecha Inicio:</label>
+       <input type="date" id="fechaInicio" required><br><br>
+
+       <label for="duracion">Duración (en semanas):</label>
+       <input type="number" id="duracion" min="1" required><br><br>
+
+       <label for="descripcion">Descripción:</label>
+       <textarea id="descripcion" required></textarea><br><br>
+
+       <button type="submit">Agregar Curso</button>
+      </form>
+  </section>
+  <!-- Sección donde se mostrarán los cursos agregados -->
+  <section id="listaCursos">
+   <h2>Lista de Cursos Agregados</h2>
+    <div id="cursos"></div>
+  
+  </section>
+
+
+  
+   <!------------------------------Pie de página------------------------------>
+   <footer class="footer">
+      <div class="footer-column">
+          <p>🎧 Atención al cliente 24/7: (+593)980524806</p>
+          <p>Email: AcaEndRed057gmail.com</p>
+          <div class="social-icons">
+              <a href="https://facebook.com/tu-pagina" target="_blank">
+                 <!-------- <img src="img/facebook.PNG" alt="Facebook">--->
+                  <img src="../../assets/img/facebook.PNG" alt="Facebook">
+              </a>
+              <a href="https://instagram.com/tu-perfil" target="_blank">
+                <!-------  <img src="img/instagram.PNG" alt="Instagram">-->
+                  <img src="../../assets/img/instagram.PNG" alt="Instagram">
+              </a>
+              <a href="https://youtube.com/tu-canal" target="_blank">
+                <!--------<img src="img/youtube.PNG" alt="YouTube">---->
+                  <img src="../../assets/img/youtube.PNG" alt="YouTube">
+              </a>
+              <a href="https://wa.me/tu-numero" target="_blank">
+               <!-------<img src="img/whatsapp.PNG" alt="WhatsApp">---->
+                  <img src="img/whatsapp.PNG" alt="WhatsApp">
+              </a>
+              <a href="https://tiktok.com/tu-perfil" target="_blank">
+                  <!-------- <img src="img/tik-tok.PNG" alt="TikTok"> --->
+                  <img src="../../assets/img/tik-tok.PNG" alt="TikTok">
+              </a>
+          </div>
+      </div>
+      <div class="footer-column">
+          <div class="footer-center">
+              <h3>PREGUNTAS FRECUENTES</h3>
+              <ul>
+                  <li>Centro de ayuda en línea</li>
+                  <li>Política de devolución</li>
+                  <li>Términos y condiciones</li>
+                  <li>Propiedad intelectual</li>
+              </ul>
+          </div>
+      </div>
+      <p> ® 2019 - 2028 <br>  AcademiaEnRed  <br> Todos los derechos reservados</p>
+  </footer>
+  

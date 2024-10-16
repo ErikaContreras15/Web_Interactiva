@@ -1,1 +1,227 @@
-<p>cursos works!</p>
+
+     <!--------------------------------Encabezado----------------------------->
+     <header class="header">
+        <div class="container">   
+            <div class ="header-content">
+    
+               <nav class="nav">
+                 <ul>
+                 <li><a href="Inicio">Inicio</a></li>
+                 <li><a href="Cursos">Cursos</a></li>
+                 <li><a href="AgregarCurso">Agregar Curso</a></li>
+                 <li><a href="Contacto">Contacto</a></li> 
+                  </ul>
+                </nav>
+    
+               <div class="user-actions">
+                 <input type="text" class="search-bar" placeholder="Buscar...">
+                 <button class="login-btn">Inicia sesión</button>
+                 <button class="register-btn">Regístrate</button>
+                </div>
+            </div>
+        </div>
+
+
+
+
+
+
+
+
+
+
+
+
+<!------------- Seccion de Cursos----------------------------------->
+<section id="Cursos">
+    <h2>Cursos</h2>
+   <!------Curso 1------------->
+   <div class="course" id="course1">
+       <div class="course-title">Introducción a la Programación</div>
+       <div class="course-info">Docente: Mgs. Juan Pérez</div>
+       <div class="course-info">Fecha de inicio: 1 de Octubre, 2024</div>
+       <div class="course-info">Duración: 8 semanas</div>
+       <button class="details-btn" onclick="toggleDetails('details1')">Ver Más Detalles</button>
+       <div class="course-details" id="details1" style="display:none;">
+           <p>Descripción:<br> Curso introductorio para aprender los fundamentos de la programación.</p>
+       </div>
+   </div>
+
+   <!--------Curso 2-------->
+   <div class="course" id="course2">
+       <div class="course-title">Data Science para Principiantes</div>
+       <div class="course-info">Docente: Ing. Carlos Martínez</div>
+       <div class="course-info">Fecha de inicio: 5 de Noviembre, 2024</div>
+       <div class="course-info">Duración: 12 semanas</div>
+       <button class="details-btn" onclick="toggleDetails('details2')">Ver Más Detalles</button>
+       <div class="course-details" id="details2" style="display:none;">
+           <p>Descripción:<br> Aprende los conceptos básicos de Data Science y su aplicación en proyectos reales.</p>
+       </div>
+   </div>
+
+   <!------Curso 3---------->
+     <div class="course" id="course3">
+       <div class="course-title">Uso de herramientas digitales</div>
+       <div class="course-info">Docente: Ing.Fernando Sanchez </div>
+       <div class="course-info">Fecha de inicio: 15 de Noviembre, 2024</div>
+       <div class="course-info">Duración: 10 semanas</div>
+       <button class="details-btn" onclick="toggleDetails('details3')">Ver Más Detalles</button>
+       <div class="course-details" id="details3" style="display:none;">
+           <p>Descripción:<br> “De vez en cuando, una nueva tecnología, un antiguo problema y una gran idea se convierten en una innovación”</p>
+       </div>
+   </div>
+
+   <!---------Curso 4-------->
+     <div class="course" id="course4">
+       <div class="course-title">Identidad corporativa en entornos presenciales, remotos y mixtos</div>
+       <div class="course-info">Docente: Ing.Amanda Arizaga </div>
+       <div class="course-info">Fecha de inicio: 10 de Octubre, 2024</div>
+       <div class="course-info">Duración: 13 semanas</div>
+       <button class="details-btn" onclick="toggleDetails('details4')">Ver Más Detalles</button>
+       <div class="course-details" id="details4" style="display:none;">
+           <p>Descripción:<br> La identidad corporativa de una empresa va más allá de la apariencia del negocio y está relacionada con asuntos culturales y organizacionales importantes de la compañía.</p>
+       </div>
+   </div>
+  
+   <!--------- Curso 5 -------->
+   <div class="course" id="course5">
+           <div class="course-title">Ciberseguridad</div>
+           <div class="course-info">Docente: Mgtr.Sofia Benavides</div>
+           <div class="course-info">Fecha de inicio: 22 de Octubre, 2024</div>
+           <div class="course-info">Duración: 25 semanas</div>
+           <button class="details-btn" onclick="toggleDetails('details5')">Ver Más Detalles</button>
+           <div class="course-details" id="details5" style="display:none;">
+               <p> Descripción:<br> Importancia de entender los riesgos electrónicos a los que se exponen las grandes empresas y menciona cuál es la política de seguridad que protege los datos, sistemas informáticos e información de la empresa.</p>
+           </div>
+   </div>
+
+       <!--------- Curso 6 -------->
+       <div class="course" id="course5">
+           <div class="course-title">Estrategias de Instagram para desarrollo de marcas</div>
+           <div class="course-info">Docente: Julieta Tello</div>
+           <div class="course-info">Fecha de inicio: 13 de Noviembre, 2024</div>
+           <div class="course-info">Duración: 8 semanas</div>
+           <button class="details-btn" onclick="toggleDetails('details6')">Ver Más Detalles</button>
+           <div class="course-details" id="details6" style="display:none;">
+               <p> Descripción: <br>Averigua las claves de la ‘Fórmula del Dragón’ para crear contenido interesante que haga destacar tu marca </p>
+           </div>
+   </div>
+</section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   <!------------------------------Pie de página------------------------------>
+   <footer class="footer">
+    <div class="footer-column">
+        <p>🎧 Atención al cliente 24/7: (+593)980524806</p>
+        <p>Email: AcaEndRed057gmail.com</p>
+        <div class="social-icons">
+            <a href="https://facebook.com/tu-pagina" target="_blank">
+               <!-------- <img src="img/facebook.PNG" alt="Facebook">--->
+                <img src="../../assets/img/facebook.PNG" alt="Facebook">
+            </a>
+            <a href="https://instagram.com/tu-perfil" target="_blank">
+              <!-------  <img src="img/instagram.PNG" alt="Instagram">-->
+                <img src="../../assets/img/instagram.PNG" alt="Instagram">
+            </a>
+            <a href="https://youtube.com/tu-canal" target="_blank">
+              <!--------<img src="img/youtube.PNG" alt="YouTube">---->
+                <img src="../../assets/img/youtube.PNG" alt="YouTube">
+            </a>
+            <a href="https://wa.me/tu-numero" target="_blank">
+             <!-------<img src="img/whatsapp.PNG" alt="WhatsApp">---->
+                <img src="img/whatsapp.PNG" alt="WhatsApp">
+            </a>
+            <a href="https://tiktok.com/tu-perfil" target="_blank">
+                <!-------- <img src="img/tik-tok.PNG" alt="TikTok"> --->
+                <img src="../../assets/img/tik-tok.PNG" alt="TikTok">
+            </a>
+        </div>
+    </div>
+    <div class="footer-column">
+        <div class="footer-center">
+            <h3>PREGUNTAS FRECUENTES</h3>
+            <ul>
+                <li>Centro de ayuda en línea</li>
+                <li>Política de devolución</li>
+                <li>Términos y condiciones</li>
+                <li>Propiedad intelectual</li>
+            </ul>
+        </div>
+    </div>
+    <p> ® 2019 - 2028 <br>  AcademiaEnRed  <br> Todos los derechos reservados</p>
+</footer>
