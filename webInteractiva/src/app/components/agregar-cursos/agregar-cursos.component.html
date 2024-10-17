@@ -1,56 +1,68 @@
 
-      <!--------------------------------Encabezado----------------------------->
-      <header class="header">
-        <div class="container">   
-            <div class ="header-content">
-    
-               <nav class="nav">
-                 <ul>
-                 <li><a href="Inicio">Inicio</a></li>
-                 <li><a href="Cursos">Cursos</a></li>
-                 <li><a href="AgregarCurso">Agregar Curso</a></li>
-                 <li><a href="Contacto">Contacto</a></li> 
-                  </ul>
-                </nav>
-    
-               <div class="user-actions">
-                 <input type="text" class="search-bar" placeholder="Buscar...">
-                 <button class="login-btn">Inicia sesión</button>
-                 <button class="register-btn">Regístrate</button>
-                </div>
-            </div>
-        </div>
-      </header>
- 
- 
- <!-- Formulario de Registro de Cursos -->
-   <section id="AgregarCurso">
-    <h2>Registrar Cursos</h2>
-    <form id="formCurso">
-       <label for="nombre">Nombre del curso:</label>
-       <input type="text" id="nombre" required><br><br>
 
-       <label for="docente">Docente:</label>
-       <input type="text" id="docente" required><br><br>
+<!--------------------------------Encabezado-----------------------------> 
+<header class="header">
+  <div class="container">   
+      <div class="header-content">
+          <nav class="nav">
+              <ul>
+                  <li><a routerLink="/inicio">Inicio</a></li>
+                  <li><a routerLink="/cursos">Cursos</a></li>
+                  <li><a routerLink="/agregar-curso">Agregar Curso</a></li>
+                  <li><a routerLink="/contacto">Contacto</a></li> 
+              </ul>
+          </nav>
 
-       <label for="fechaInicio">Fecha Inicio:</label>
-       <input type="date" id="fechaInicio" required><br><br>
+          <div class="user-actions">
+              <input type="text" class="search-bar" placeholder="Buscar...">
+              <button class="login-btn">Inicia sesión</button>
+              <button class="register-btn">Regístrate</button>
+          </div>
+      </div>
+  </div>
+</header>
 
-       <label for="duracion">Duración (en semanas):</label>
-       <input type="number" id="duracion" min="1" required><br><br>
+<!-- Formulario de Registro de Cursos -->
+<section id="AgregarCurso">
+  <h2>Registrar Cursos</h2>
+  <form id="formCurso" (ngSubmit)="agregarCurso()" #cursoForm="ngForm">
+      <label for="nombreCurso">Nombre del curso:</label>
+      <input type="text" id="nombre" name="nombre" [(ngModel)]="curso.nombre" required><br><br>
 
-       <label for="descripcion">Descripción:</label>
-       <textarea id="descripcion" required></textarea><br><br>
+      <label for="nombreDocente">Docente:</label>
+      <input type="text" id="docente" name="docente" [(ngModel)]="curso.docente" required><br><br>
 
-       <button type="submit">Agregar Curso</button>
-      </form>
-  </section>
-  <!-- Sección donde se mostrarán los cursos agregados -->
-  <section id="listaCursos">
-   <h2>Lista de Cursos Agregados</h2>
-    <div id="cursos"></div>
-  
-  </section>
+      <label for="fechaInicio">Fecha Inicio:</label>
+      <input type="date" id="fechaInicio" name="fechaInicio" [(ngModel)]="curso.fechaInicio" required><br><br>
+
+      <label for="duracion">Duración (en semanas):</label>
+      <input type="number" id="duracion" name="duracion" [(ngModel)]="curso.duracion" min="1" required><br><br>
+
+      <label for="descripcion">Descripción:</label>
+      <textarea id="descripcion" name="descripcion" [(ngModel)]="curso.descripcion" required></textarea><br><br>
+
+      <button type="submit" [disabled]="!cursoForm.form.valid">Agregar Curso</button>
+  </form>
+</section>
+
+<!-- Sección donde se mostrarán los cursos agregados -->
+<section id="listaCursos">
+  <h2>Lista de Cursos Agregados</h2>
+  <div id="cursos">
+      <ul>
+          <li *ngFor="let curso of cursos; let i = index">
+              <h3>{{ curso.nombre }}</h3>
+              <p><strong>Docente:</strong> {{ curso.docente }}</p>
+              <p><strong>Fecha de Inicio:</strong> {{ curso.fechaInicio }}</p>
+              <p><strong>Duración:</strong> {{ curso.duracion }} semanas</p>
+              <p><strong>Descripción:</strong> {{ curso.descripcion }}</p>
+              <button (click)="eliminarCurso(i)">Eliminar</button>
+              <hr>
+          </li>
+      </ul>
+  </div>
+</section>
+
 
 
   
