@@ -23,46 +23,41 @@
 </header>
 
 <!-- Formulario de Registro de Cursos -->
-<section id="AgregarCurso">
-  <h2>Registrar Cursos</h2>
-  <form id="formCurso" (ngSubmit)="agregarCurso()" #cursoForm="ngForm">
-      <label for="nombreCurso">Nombre del curso:</label>
-      <input type="text" id="nombre" name="nombre" [(ngModel)]="curso.nombre" required><br><br>
-
-      <label for="nombreDocente">Docente:</label>
-      <input type="text" id="docente" name="docente" [(ngModel)]="curso.docente" required><br><br>
-
+<section id="agregarCursos">
+    <h2>Registrar Cursos</h2>
+    <form (ngSubmit)="agregarCurso()" #cursoForm="ngForm">
+      <label for="nombre">Nombre del curso:</label>
+      <input type="text" id="nombre" [(ngModel)]="nuevoCurso.nombre" name="nombre" required><br><br>
+  
+      <label for="docente">Docente:</label>
+      <input type="text" id="docente" [(ngModel)]="nuevoCurso.docente" name="docente" required><br><br>
+  
       <label for="fechaInicio">Fecha Inicio:</label>
-      <input type="date" id="fechaInicio" name="fechaInicio" [(ngModel)]="curso.fechaInicio" required><br><br>
-
+      <input type="date" id="fechaInicio" [(ngModel)]="nuevoCurso.fechaInicio" name="fechaInicio" required><br><br>
+  
       <label for="duracion">Duración (en semanas):</label>
-      <input type="number" id="duracion" name="duracion" [(ngModel)]="curso.duracion" min="1" required><br><br>
-
+      <input type="number" id="duracion" [(ngModel)]="nuevoCurso.duracion" name="duracion" min="1" required><br><br>
+  
       <label for="descripcion">Descripción:</label>
-      <textarea id="descripcion" name="descripcion" [(ngModel)]="curso.descripcion" required></textarea><br><br>
-
+      <textarea id="descripcion" [(ngModel)]="nuevoCurso.descripcion" name="descripcion" required></textarea><br><br>
+  
       <button type="submit" [disabled]="!cursoForm.form.valid">Agregar Curso</button>
-  </form>
-</section>
-
-<!-- Sección donde se mostrarán los cursos agregados -->
-<section id="listaCursos">
-  <h2>Lista de Cursos Agregados</h2>
-  <div id="cursos">
-      <ul>
-          <li *ngFor="let curso of cursos; let i = index">
-              <h3>{{ curso.nombre }}</h3>
-              <p><strong>Docente:</strong> {{ curso.docente }}</p>
-              <p><strong>Fecha de Inicio:</strong> {{ curso.fechaInicio }}</p>
-              <p><strong>Duración:</strong> {{ curso.duracion }} semanas</p>
-              <p><strong>Descripción:</strong> {{ curso.descripcion }}</p>
-              <button (click)="eliminarCurso(i)">Eliminar</button>
-              <hr>
-          </li>
-      </ul>
-  </div>
-</section>
-
+    </form>
+  </section>
+  
+  <section id="listaCursos">
+    <h2>Lista de Cursos Agregados</h2>
+    <div *ngFor="let curso of cursos; let i = index">
+      <h3>{{ curso.nombre }}</h3>
+      <p><strong>Docente:</strong> {{ curso.docente }}</p>
+      <p><strong>Fecha de Inicio:</strong> {{ curso.fechaInicio }}</p>
+      <p><strong>Duración:</strong> {{ curso.duracion }} semanas</p>
+      <p><strong>Descripción:</strong> {{ curso.descripcion }}</p>
+      <button (click)="eliminarCurso(i)">Eliminar</button>
+      <hr>
+    </div>
+  </section>
+  
 
 
   

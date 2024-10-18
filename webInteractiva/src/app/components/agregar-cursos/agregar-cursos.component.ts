@@ -1,8 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { CommonModule } from '@angular/common'; 
-
 import { FormsModule } from '@angular/forms'; 
 
+//import { NgForm } from '@angular/forms';
 @Component({
   selector: 'app-agregar-cursos',
   standalone: true,
@@ -12,64 +12,54 @@ import { FormsModule } from '@angular/forms';
 })
 
 export class AgregarCursoComponent implements OnInit {
-  curso = {
-    nombre: '',
-    docente: '',
-    fechaInicio: '',
-    duracion: 0,
-    descripcion: ''
-  };
 
-  cursos: any[] = [];
-
-  ngOnInit() {
-    this.cargarCursos(); 
-  }
-
-  agregarCurso() {
-    if (this.curso.nombre && this.curso.docente && this.curso.fechaInicio && this.curso.duracion && this.curso.descripcion) {
-      // Crear un objeto curso con los datos actuales
-      const nuevoCurso = { ...this.curso };
-
-      // Guardar en localStorage
-      /*let cursosGuardados = JSON.parse(localStorage.getItem('cursos')) || [];*/
-      let cursosGuardados = localStorage.getItem('cursos') ? JSON.parse(localStorage.getItem('cursos')!) : [];
-
-
-      cursosGuardados.push(nuevoCurso);
-      localStorage.setItem('cursos', JSON.stringify(cursosGuardados));
-
-      // Actualizar la lista en la vista
-      this.cursos.push(nuevoCurso);
-
-      // Limpiar el formulario
-      this.limpiarFormulario();
-    }
-  }
-
-  cargarCursos() {
-    const cursosGuardados = localStorage.getItem('cursos') ? JSON.parse(localStorage.getItem('cursos')!) : [];
-    this.cursos = cursosGuardados; // Cargar los cursos desde el localStorage
-  }
-
- /* cargarCursos() {
-    const cursosGuardados = JSON.parse(localStorage.getItem('cursos')) || [];
-    this.cursos = cursosGuardados; 
-  }*/
-
-  eliminarCurso(index: number) {
-    this.cursos.splice(index, 1);
-    localStorage.setItem('cursos', JSON.stringify(this.cursos)); 
-  }
-
-  limpiarFormulario() {
-    this.curso = {
+    cursos: any[] = []; // Array para almacenar los cursos
+    nuevoCurso = {
       nombre: '',
       docente: '',
       fechaInicio: '',
-      duracion: 0,
+      duracion: '',
       descripcion: ''
     };
-  }
-}
+  
+    ngOnInit() {
+      this.cargarCursos(); 
+    }
+  
+   
+    agregarCurso() {
+      if (!this.nuevoCurso.nombre || !this.nuevoCurso.docente || !this.nuevoCurso.fechaInicio || !this.nuevoCurso.duracion || !this.nuevoCurso.descripcion) {
+        alert('Por favor, completa todos los campos.');
+        return;
+      }
+  
+      const cursosGuardados = JSON.parse(localStorage.getItem('cursos') || '[]');
+      cursosGuardados.push(this.nuevoCurso);
+      localStorage.setItem('cursos', JSON.stringify(cursosGuardados));
+  
+      this.nuevoCurso = {
+        nombre: '',
+        docente: '',
+        fechaInicio: '',
+        duracion: '',
+        descripcion: ''
+      };
+  
+      this.cargarCursos(); 
+    }
+  
+   
+    cargarCursos() {
+      this.cursos = JSON.parse(localStorage.getItem('cursos') || '[]');
+    }
+  
+    
+    eliminarCurso(index: number) {
+      const cursosGuardados = JSON.parse(localStorage.getItem('cursos') || '[]');
+      cursosGuardados.splice(index, 1);
+      localStorage.setItem('cursos', JSON.stringify(cursosGuardados));
+      this.cargarCursos(); 
+    }
 
+}
+  

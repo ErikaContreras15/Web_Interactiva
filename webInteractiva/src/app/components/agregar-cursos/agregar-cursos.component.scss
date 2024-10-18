@@ -105,8 +105,9 @@ body, html {
 
 
 /*---------------------------------------------------- FORMULARIO DE AGREGAR CURSOS--------------------------------------*/
+/*---------------------------------------------------- FORMULARIO DE AGREGAR CURSOS--------------------------------------*/
 
-#AgregarCurso {
+#agregarCursos {
     padding: 20px;
     margin: 20px auto;
     max-width: 600px; /* Ajustar el tamaño del contenedor */
@@ -114,26 +115,28 @@ body, html {
     box-shadow: 0 2px 10px rgba(137, 47, 47, 0.1);
 }
 
-#AgregarCurso h2 {
+#agregarCursos h2 {
     font-size: 24px;
     color: #216fd5de;
     margin-bottom: 20px;
     text-align: center;
 }
+
 /* Estilo del formulario */
-#formCurso {
+form {
     display: flex;
     flex-direction: column;
     gap: 10px; /* Espaciado entre los elementos */
 }
 
-#formCurso label {
+form label {
     font-size: 16px;
     color: #333;
 }
-/* Estilo de los campos de entrada */
-#formCurso input,
-#formCurso textarea {
+
+/* Estilo de los campos de entrada y textarea */
+form input,
+form textarea {
     padding: 10px;
     font-size: 14px;
     border: 1px solid #ccc;
@@ -143,7 +146,7 @@ body, html {
 }
 
 /* Estilo para el botón */
-#formCurso button {
+form button {
     background-color: #007BFF;
     color: white;
     font-size: 16px;
@@ -155,7 +158,7 @@ body, html {
 }
 
 /* Efecto hover en el botón */
-#formCurso button:hover {
+form button:hover {
     background-color: #0056b3;
 }
 
@@ -165,6 +168,7 @@ body, html {
     margin: 20px auto;
     background-color: #cfd5d893;
 }
+
 #listaCursos h2 {
     font-size: 24px;
     color: #216fd5de;
@@ -173,13 +177,11 @@ body, html {
 }
 
 /* Contenedor de los cursos */
-
 #cursos {
     display: flex;
     flex-wrap: wrap; /* Permite ajustar cursos en filas múltiples */
     gap: 50px; /* Espaciado entre cursos */
 }
-
 
 /* Estilo de cada curso agregado */
 #cursos .course {
@@ -195,6 +197,50 @@ body, html {
     margin-bottom: 10px;
     border-radius: 4px;
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

@@ -1,25 +1,14 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 
+import { Curso } from '../../domain/Curso';
+import { FormsModule } from '@angular/forms';
+import { CommonModule } from '@angular/common';
 @Component({
   selector: 'app-cursos',
   standalone: true,
-  imports: [],
+  imports: [FormsModule, CommonModule],
   templateUrl: './cursos.component.html',
   styleUrl: './cursos.component.scss'
 })
-export class CursosComponent {
-
-  /*
-  //SECCION 1 CURSOS DISPONIBLES
-// Función para mostrar u ocultar los detalles de cada curso
-function toggleDetails(courseId) {
-  var details = document.getElementById(courseId);
-  if (details.style.display === "none") {
-      details.style.display = "block";
-  } else {
-      details.style.display = "none";
-  }
-}
-
-*/
+export class CursosComponent  {
 }
