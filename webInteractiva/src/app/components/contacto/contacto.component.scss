@@ -83,33 +83,13 @@ body, html {
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 /* ------------------------------------CONTACTO ------------------------------------ */
 #Contacto {
     padding: 40px;
     background-color: #f9f9f9;
     margin-top: 30px;
 }
+
 #Contacto h2 {
     font-size: 28px;
     color: #007BFF;
@@ -132,6 +112,18 @@ body, html {
     margin: 0 auto;
     gap: 15px;
 }
+
+/* Estilo para los campos del formulario */
+#formContacto input,
+#formContacto textarea {
+    padding: 10px;
+    font-size: 14px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    width: 100%;
+    box-sizing: border-box;
+}
+
 /* Estilo del botón de enviar */
 #formContacto button {
     background-color: #007BFF;
@@ -143,6 +135,7 @@ body, html {
     cursor: pointer;
     transition: background-color 0.3s;
 }
+
 #formContacto button:hover {
     background-color: #0056b3;
 }
@@ -153,6 +146,14 @@ body, html {
     color: #28a745;
     text-align: center;
 }
+
+/* Mensajes de error */
+.error {
+    color: red;
+    font-size: 12px;
+    margin-top: 5px;
+}
+
 
 
 
